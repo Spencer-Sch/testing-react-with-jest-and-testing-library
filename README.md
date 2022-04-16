@@ -16,6 +16,6 @@ Tracking my progress through the course.
 
 #### Section 1: Introduction
 
-- In Progress...
+- Complete!
 
 [Back To The Top](#testing-react-with-jest-and-testing-library)
