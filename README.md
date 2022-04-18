@@ -22,4 +22,8 @@ Tracking my progress through the course.
 
 - Complete!
 
+#### Section 3: ESLint with Testing Library, plus Prettier
+
+- Complete!
+
 [Back To The Top](#testing-react-with-jest-and-testing-library)
