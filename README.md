@@ -20,6 +20,6 @@ Tracking my progress through the course.
 
 #### Section 2: Simple App: Color Button
 
-- Lessons 1 through 10 complete
+- Complete!
 
 [Back To The Top](#testing-react-with-jest-and-testing-library)
