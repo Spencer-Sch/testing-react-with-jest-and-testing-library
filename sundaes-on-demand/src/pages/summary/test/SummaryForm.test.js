@@ -1,9 +1,9 @@
-import { fireEvent } from '@testing-library/react';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import SummaryForm from '../SummaryForm';
 
-describe('Initial app conditions', () => {
+describe('Checkbox and button tests', () => {
   test('Checkbox is present and unchecked, button is pressent and disabled', () => {
     render(<SummaryForm />);
 
@@ -26,10 +26,22 @@ describe('Initial app conditions', () => {
     });
     const button = screen.getByRole('button', { name: 'Confirm order' });
 
-    fireEvent.click(checkbox);
+    userEvent.click(checkbox);
     expect(button).toBeEnabled();
 
-    fireEvent.click(checkbox);
+    userEvent.click(checkbox);
     expect(button).toBeDisabled();
+  });
+});
+
+describe('Popover tests', () => {
+  test('popover responds to hover', () => {
+    render(<SummaryForm />);
+
+    // popover starts out hidden
+
+    // popover appears upon mouseover of checkbox label
+
+    // popover disapears when we mouse out
   });
 });
