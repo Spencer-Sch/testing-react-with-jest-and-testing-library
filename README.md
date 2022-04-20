@@ -28,6 +28,6 @@ Tracking my progress through the course.
 
 #### Section 4: Sundaes On Demand: Form Review and Popover
 
-- Lessons 1 and 2 complete
+- Complete!
 
 [Back To The Top](#testing-react-with-jest-and-testing-library)
