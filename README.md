@@ -30,4 +30,8 @@ Tracking my progress through the course.
 
 - Complete!
 
+#### Section 5: Simulating Server Response with Mock Service Worker
+
+- Lessons 1 through 10 complete
+
 [Back To The Top](#testing-react-with-jest-and-testing-library)
