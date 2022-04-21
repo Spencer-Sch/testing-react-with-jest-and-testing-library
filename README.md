@@ -34,4 +34,8 @@ Tracking my progress through the course.
 
 - Complete!
 
+#### Section 6: Testing Components Wrapped in a Provider
+
+- Lessons 1 through 7 complete
+
 [Back To The Top](#testing-react-with-jest-and-testing-library)
