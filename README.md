@@ -40,6 +40,6 @@ Tracking my progress through the course.
 
 #### Section 7: Final Exam: Order Phases
 
-- lessons 1 through 6 complete
+- Complete!
 
 [Back To The Top](#testing-react-with-jest-and-testing-library)
