@@ -62,11 +62,19 @@ test('order phases for happy path', async () => {
   });
   userEvent.click(confirmOrderButton);
 
+  // confirm "loading" text is on the screen
+  const loading = screen.getByText(/loading/i);
+  expect(loading).toBeInTheDocument();
+
   // confirm order number on confirmation page
   const thankYouHeader = await screen.findByRole('heading', {
     name: /thank you/i,
   });
   expect(thankYouHeader).toBeInTheDocument();
+
+  // confirm "loading" text is not on the screen
+  const notLoading = screen.queryByText(/loading/i);
+  expect(notLoading).not.toBeInTheDocument();
 
   const orderNumber = await screen.findByText(/order number/i);
   expect(orderNumber).toBeInTheDocument();
@@ -86,4 +94,27 @@ test('order phases for happy path', async () => {
   // do we need to await anything to avoid test errors?
   await screen.findByRole('spinbutton', { name: 'Vanilla' });
   await screen.findByRole('checkbox', { name: 'Cherries' });
+});
+
+test('Toppings header is not on summary page if no toppings ordered', async () => {
+  render(<App />);
+
+  const vanillaInput = await screen.findByRole('spinbutton', {
+    name: /vanilla/i,
+  });
+  userEvent.clear(vanillaInput);
+  userEvent.type(vanillaInput, '1');
+
+  const orderButton = screen.getByRole('button', { name: 'Order Sundae!' });
+  userEvent.click(orderButton);
+
+  // check summary information based on order
+  const scoopsTotal = screen.getByRole('heading', {
+    name: 'Scoops: $2.00',
+  });
+  expect(scoopsTotal).toBeInTheDocument();
+
+  // expect toppings element to not display
+  const toppingsHeading = screen.queryByRole('heading', { name: /toppings/i });
+  expect(toppingsHeading).not.toBeInTheDocument();
 });

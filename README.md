@@ -42,4 +42,8 @@ Tracking my progress through the course.
 
 - Complete!
 
+#### Section 8: Optional Extra Practice
+
+- lessons 1 through 3 - complete
+
 [Back To The Top](#testing-react-with-jest-and-testing-library)
