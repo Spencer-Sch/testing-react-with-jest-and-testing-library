@@ -1,4 +1,6 @@
 import { render, screen } from '../../../test-utils/testing-library-utils';
+import userEvent from '@testing-library/user-event';
+import { useOrderDetails } from '../../../contexts/OrderDetails';
 
 import Options from '../Options';
 
@@ -31,5 +33,18 @@ describe('Options.jsx Tests', () => {
       'M&Ms topping',
       'Hot fudge topping',
     ]);
+  });
+
+  test("Item count doesn't update when input is invalid", async () => {
+    render(<Options optionType="scoops" />);
+
+    const vanillaInput = await screen.findByRole('spinbutton', {
+      name: /vanilla/i,
+    });
+    userEvent.clear(vanillaInput);
+    userEvent.type(vanillaInput, '-1');
+
+    const scoopsTotal = screen.getByText('Scoops total: $0.00');
+    expect(scoopsTotal).toBeInTheDocument();
   });
 });

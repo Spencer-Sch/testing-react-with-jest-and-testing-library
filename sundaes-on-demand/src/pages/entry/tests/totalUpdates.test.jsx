@@ -127,7 +127,9 @@ describe('grand total', () => {
     });
     expect(grandTotal).toHaveTextContent('6.00');
 
+    userEvent.clear(chocolateInput);
     userEvent.type(chocolateInput, '1');
+    userEvent.clear(vanillaInput);
     userEvent.type(vanillaInput, '0');
     expect(grandTotal).toHaveTextContent('2.00');
   });
