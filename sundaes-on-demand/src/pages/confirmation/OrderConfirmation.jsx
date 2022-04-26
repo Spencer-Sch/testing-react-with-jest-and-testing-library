@@ -26,7 +26,7 @@ const OrderConfirmation = ({ setOrderPhase }) => {
   if (error) {
     // @ts-ignore
     return (
-      <AlertBanner message="Something went wrong getting the order number." />
+      <AlertBanner message="An unexpected error occured. Please try again later." />
     );
   }
 

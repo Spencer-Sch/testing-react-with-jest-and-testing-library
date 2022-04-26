@@ -1,6 +1,5 @@
 import { render, screen } from '../../../test-utils/testing-library-utils';
 import userEvent from '@testing-library/user-event';
-import { useOrderDetails } from '../../../contexts/OrderDetails';
 
 import Options from '../Options';
 
